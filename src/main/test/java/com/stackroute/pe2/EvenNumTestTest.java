@@ -9,49 +9,50 @@ import static org.junit.Assert.*;
 public class EvenNumTestTest {
 
     private EvenNumTest evenNumTest;
-//created object before running test cases
+
+    //created object before running test cases
     @Before
-    public  void  setUp(){
+    public void setUp() {
 
-        this.evenNumTest=new EvenNumTest();
+        this.evenNumTest = new EvenNumTest();
     }
-//remove object after running test cases
+
+    //remove object after running test cases
     @After
-    public  void tearDown(){
+    public void tearDown() {
 
-        this.evenNumTest=null;
+        this.evenNumTest = null;
     }
 
-//function to check the given number is even or not (true:even)
+    //function to check the given number is even or not (true:even)
     @Test
-    public  void givennumberShouldReturnEven(){
+    public void givenNumberShouldReturnEven() {
         //act
         Boolean inputNumber = evenNumTest.isEven(22);
         //Assert
 
-        assertEquals(true,inputNumber);
+        assertEquals(true, inputNumber);
     }
+
     //function to check the given number is odd or not (false:odd)
     @Test
-    public  void givennumberShouldNotReturnEven(){
+    public void givenNumberShouldNotReturnEven() {
         //act
-        Boolean inputNumber= evenNumTest.isEven(22);
+        Boolean inputNumber = evenNumTest.isEven(22);
         //Assert
 
-        assertEquals(false,inputNumber);
+        assertEquals(false, inputNumber);
     }
 
-//function to check the given input number is valid or not like for -ve ,0 or special characters
+    //function to check the given input number is valid or not like for -ve ,0 or special characters
     @Test
-    public void  givenInputshouldReturnError(){
+    public void givenInputZeroShouldReturnErrorMessage() {
 
         //act
-       String inputNumber =evenNumTest.isInvalidInput(0);
-       //assert
-        assertEquals("Invalid number or input ",inputNumber);
+        String inputNumber = evenNumTest.isInvalidInput(0);
+        //assert
+        assertEquals("Invalid number or input ", inputNumber);
     }
-
-
 
 
 }

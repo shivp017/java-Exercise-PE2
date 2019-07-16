@@ -5,7 +5,7 @@ public abstract class Member {
 
 }
 
-class Memberchild{
+class MemberChild {
 
 
 }

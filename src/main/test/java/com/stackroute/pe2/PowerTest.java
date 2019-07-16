@@ -8,37 +8,39 @@ import static org.junit.Assert.*;
 
 public class PowerTest {
 
-   private Power power;
-////created object before running test cases
-    @Before
-    public  void  setUp(){
+    private Power power;
 
-        this.power=new Power();
+    ////created object before running test cases
+    @Before
+    public void setUp() {
+
+        this.power = new Power();
     }
+
     //remove object before running test cases
     @After
-    public  void tearDown(){
+    public void tearDown() {
 
-        this.power=null;
+        this.power = null;
     }
 
-//check if i/p is power of four
+    //check if i/p is power of four
     @Test
-    public  void givennumberispowerof4(){
+    public void givenNumberIsPowerOf4() {
         //act
-        String flag = power.poweroffour(44);
+        String flag = power.powerOfFour(64);
         //Assert
 
-        assertEquals("power of 4",flag);
+        assertEquals("power of 4", flag);
     }
 
-//check if not power of four
-
-    public  void givenNumberIsNotPowerof4() {
+    //check if not power of four
+    @Test
+    public void givenNumberIsNotPowerof4() {
         //act
-       String flag1 = power.poweroffour(6488);
+        String flag = power.powerOfFour(648000);
         //Assert
-        assertEquals("Not a power of 4",flag1);
+        assertEquals("Not a power of 4", flag);
     }
 
 

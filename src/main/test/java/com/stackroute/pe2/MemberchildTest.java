@@ -6,21 +6,21 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class MemberchildTest {
+public class MemberChildTest {
 
 
-          private Memberchild memberchild;
+          private MemberChild memberChild;
     //created object before running test cases
         @Before
         public  void  setUp(){
 
-            this.memberchild=new Memberchild();
+            this.memberChild=new MemberChild();
         }
     //Remove object before running test cases
         @After
         public  void tearDown(){
 
-            this.memberchild=null;
+            this.memberChild=null;
 
         }
 //this function will check the i/p Name
@@ -29,7 +29,7 @@ public class MemberchildTest {
         public void givenInputStringShouldReturnName(){
 
             //action
-            String Input=memberchild.memName("name");
+            String Input=memberChild.memberName("name");
             //assert
             assertEquals("Harry Potter",Input);
         }
@@ -41,23 +41,23 @@ public class MemberchildTest {
         public void givenInputNameShouldNotReturnNull(){
 
             //action
-            String Input=memberchild.memName("name");
+            String Input=memberChild.memberName("name");
             //assert
             assertEquals(null,Input);
         }
 
         @Test
-        public Void givenInputSalaryShouldNotReturnNull() {
+        public void givenInputSalaryShouldNotReturnNull() {
             //action
-            int Input = memberchild.memSalary(3700);
+            int Input = memberChild.memberSalary(3700);
             //assert
             assertEquals(null, Input);
         }
 
         @Test
-        public Void givenInputAgeshouldAbove18(){
+        public void givenInputAgeshouldAbove18(){
             //action
-            int Input=memberchild.memAge(7);
+            int Input=memberChild.memAge(7);
             //assert
             assertEquals("Age less than 18",Input);
 
