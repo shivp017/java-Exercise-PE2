@@ -6,15 +6,15 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class EvenNumTestTest {
+public class EvenNumber {
 
-    private EvenNumTest evenNumTest;
+    private EvenNumber evenNumber;
 
     //created object before running test cases
     @Before
     public void setUp() {
 
-        this.evenNumTest = new EvenNumTest();
+        this.evenNumber= new EvenNumber();
     }
 
     //remove object after running test cases
@@ -28,7 +28,7 @@ public class EvenNumTestTest {
     @Test
     public void givenNumberShouldReturnEven() {
         //act
-        Boolean inputNumber = evenNumTest.isEven(22);
+        Boolean inputNumber = evenNumber.isEven(22);
         //Assert
 
         assertEquals(true, inputNumber);
@@ -38,7 +38,7 @@ public class EvenNumTestTest {
     @Test
     public void givenNumberShouldNotReturnEven() {
         //act
-        Boolean inputNumber = evenNumTest.isEven(22);
+        Boolean inputNumber = evenNumber.isEven(22);
         //Assert
 
         assertEquals(false, inputNumber);
@@ -49,7 +49,7 @@ public class EvenNumTestTest {
     public void givenInputZeroShouldReturnErrorMessage() {
 
         //act
-        String inputNumber = evenNumTest.isInvalidInput(0);
+        String inputNumber = evenNumber.isInvalidInput(0);
         //assert
         assertEquals("Invalid number or input ", inputNumber);
     }

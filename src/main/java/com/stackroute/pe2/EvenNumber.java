@@ -1,6 +1,6 @@
 package com.stackroute.pe2;
 
-public class EvenNumTest {
+public class EvenNumber {
 
 
 }
