@@ -9,16 +9,16 @@ import static org.junit.Assert.*;
 public class MemberchildTest {
 
 
-          Memberchild memberchild;
-
+          private Memberchild memberchild;
+    //created object before running test cases
         @Before
-        public  void  setup(){
+        public  void  setUp(){
 
             this.memberchild=new Memberchild();
         }
-
+    //Remove object before running test cases
         @After
-        public  void teardown(){
+        public  void tearDown(){
 
             this.memberchild=null;
 

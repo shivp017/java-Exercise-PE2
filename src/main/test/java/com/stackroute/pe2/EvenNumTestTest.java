@@ -8,47 +8,50 @@ import static org.junit.Assert.*;
 
 public class EvenNumTestTest {
 
-    EvenNumTest evenNumTest;
-
+    private EvenNumTest evenNumTest;
+//created object before running test cases
     @Before
-    public  void  setup(){
+    public  void  setUp(){
 
         this.evenNumTest=new EvenNumTest();
     }
-
+//remove object after running test cases
     @After
-    public  void teardown(){
+    public  void tearDown(){
 
         this.evenNumTest=null;
     }
 
-
+//function to check the given number is even or not (true:even)
     @Test
     public  void givennumberShouldReturnEven(){
         //act
-        Boolean b = evenNumTest.isEven(22);
+        Boolean inputNumber = evenNumTest.isEven(22);
         //Assert
 
-        assertEquals(true,b);
+        assertEquals(true,inputNumber);
     }
-
+    //function to check the given number is odd or not (false:odd)
     @Test
     public  void givennumberShouldNotReturnEven(){
         //act
-        Boolean b = evenNumTest.isEven(22);
+        Boolean inputNumber= evenNumTest.isEven(22);
         //Assert
 
-        assertEquals(false,b);
+        assertEquals(false,inputNumber);
     }
 
-
+//function to check the given input number is valid or not like for -ve ,0 or special characters
     @Test
-    public void  givenInputshouldReturnErron(){
+    public void  givenInputshouldReturnError(){
 
         //act
-        Boolean b =evenNumTest.isEven(0);
-        assertEquals(false,b);
+       String inputNumber =evenNumTest.isInvalidInput(0);
+       //assert
+        assertEquals("Invalid number or input ",inputNumber);
     }
+
+
 
 
 }

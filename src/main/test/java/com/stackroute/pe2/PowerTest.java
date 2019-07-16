@@ -8,16 +8,16 @@ import static org.junit.Assert.*;
 
 public class PowerTest {
 
-    Power power;
-
+   private Power power;
+////created object before running test cases
     @Before
-    public  void  setup(){
+    public  void  setUp(){
 
         this.power=new Power();
     }
-
+    //remove object before running test cases
     @After
-    public  void teardown(){
+    public  void tearDown(){
 
         this.power=null;
     }

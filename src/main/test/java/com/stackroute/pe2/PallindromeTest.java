@@ -7,16 +7,18 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class PallindromeTest {
-    Pallindrome pallindrome;
 
+    private Pallindrome pallindrome;
+
+    //created object before running test cases
     @Before
-    public  void  setup(){
+    public  void  setUp(){
 
         this.pallindrome=new Pallindrome();
     }
-
+    //Remove object before running test cases
     @After
-    public  void teardown(){
+    public  void tearDown(){
 
         this.pallindrome=null;
 
