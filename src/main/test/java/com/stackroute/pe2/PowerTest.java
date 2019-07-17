@@ -38,7 +38,7 @@ public class PowerTest {
     @Test
     public void givenNumberIsNotPowerof4() {
         //act
-        String flag = power.powerOfFour(648000);
+        String flag = power.powerOfFour(6);
         //Assert
         assertEquals("Not a power of 4", flag);
     }
