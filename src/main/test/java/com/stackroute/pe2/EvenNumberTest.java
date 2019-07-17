@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class EvenNumber {
+public class EvenNumberTest {
 
     private EvenNumber evenNumber;
 
@@ -21,7 +21,7 @@ public class EvenNumber {
     @After
     public void tearDown() {
 
-        this.evenNumTest = null;
+        this.evenNumber = null;
     }
 
     //function to check the given number is even or not (true:even)
@@ -38,7 +38,7 @@ public class EvenNumber {
     @Test
     public void givenNumberShouldNotReturnEven() {
         //act
-        Boolean inputNumber = evenNumber.isEven(22);
+        Boolean inputNumber = evenNumber.isEven(22999);
         //Assert
 
         assertEquals(false, inputNumber);
